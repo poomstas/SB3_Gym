@@ -5,11 +5,11 @@ from datetime import datetime
 from stable_baselines3 import A2C, PPO
 
 # %% Input variables
-MODELS_DIR = './models/PPO'
+MODEL = 'A2C'
+MODELS_DIR = './models/' + MODEL
 LOG_DIR = './logs/'
 SAVE_EVERY = 10000 # Save once every N iterations
 TOTAL_TIMESTEPS = SAVE_EVERY * 30
-MODEL = 'A2C'
 
 # %% Get timestamp string
 now = datetime.now()
