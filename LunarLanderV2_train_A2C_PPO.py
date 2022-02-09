@@ -35,7 +35,7 @@ elif MODEL == 'PPO':
 
 for i in range(TOTAL_TIMESTEPS//SAVE_EVERY):
     model.learn(total_timesteps=SAVE_EVERY, reset_num_timesteps=False, tb_log_name=MODEL)
-    model.save(f'{MODELS_DIR}/{MODEL}_{SAVE_EVERY*i}')
+    model.save(f'{MODELS_DIR}/{current_time_code}/{MODEL}_{SAVE_EVERY*i}')
 
 print('Sample Action:', env.action_space.sample())
 print('Observation Space Shape: ', env.observation_space.shape)
