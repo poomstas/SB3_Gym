@@ -41,9 +41,11 @@ print('Observation Space Shape: ', env.observation_space.shape)
 print('Sample Observation', env.observation_space.sample())
 
 if TOTAL_TIMESTEPS == float('inf'):
+    i = 0
     while True:
+        i += 1
         model.learn(total_timesteps=SAVE_EVERY, reset_num_timesteps=False, tb_log_name=MODEL)
-        model.save(f'{MODELS_DIR}/{current_time_code}/{MODEL}_{SAVE_EVERY*i}')
+        model.save(f'{MODELS_DIR}/{current_time_code}/{MODEL}_{SAVE_EVERY * i}')
 else:
     for i in range(TOTAL_TIMESTEPS//SAVE_EVERY):
         model.learn(total_timesteps=SAVE_EVERY, reset_num_timesteps=False, tb_log_name=MODEL)
