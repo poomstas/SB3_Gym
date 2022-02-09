@@ -6,8 +6,8 @@ from stable_baselines3 import A2C, PPO
 
 # %% Input variables
 MODEL = 'A2C'
-MODELS_DIR = './models/' + MODEL
-LOG_DIR = './logs/'
+MODELS_DIR = './LunarLanderV2_models/' + MODEL
+LOG_DIR = './LunarLanderV2_logs/'
 SAVE_EVERY = 10000 # Save once every N iterations
 TOTAL_TIMESTEPS = SAVE_EVERY * 30
 
