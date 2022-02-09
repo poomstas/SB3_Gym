@@ -30,8 +30,6 @@ if __name__=='__main__':
     ENV_NAME = 'BipedalWalker-v3'
     MODEL_PATH = '/Users/Brian/Dropbox/SideProjects/20220207_Stable_Baselines_3_Gym/SB3_Gym/bipedalwalker_models/SAC_910000.zip'
 
-    env = gym.make(ENV_NAME)
-
     if MODEL == 'PPO':
         model = PPO.load(MODEL_PATH)
     elif MODEL == 'A2C':
