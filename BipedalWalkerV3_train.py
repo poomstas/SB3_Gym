@@ -6,8 +6,8 @@ from stable_baselines3 import A2C, PPO, SAC
 
 # %% Input variables
 MODEL = 'SAC' # A2C, PPO, SAC (for now)
-MODELS_DIR = './bipedalwalker_models/'
-LOG_DIR = './bipedalwalker_logs/'
+MODELS_DIR = './bipedalwalker_hardcore_models/'
+LOG_DIR = './bipedalwalker_hardcore_logs/'
 SAVE_EVERY = 10000 # Save once every N iterations
 TOTAL_TIMESTEPS = float('inf')
 # TOTAL_TIMESTEPS = SAVE_EVERY * 30
@@ -26,7 +26,8 @@ if not os.path.exists(LOG_DIR):
     os.makedirs(LOG_DIR)
 
 # %% Train the model
-env = gym.make('BipedalWalker-v3')
+# env = gym.make('BipedalWalker-v3')
+env = gym.make('BipedalWalkerHardcore-v3')
 env.reset()
 
 if MODEL == 'A2C':
