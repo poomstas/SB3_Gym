@@ -1,6 +1,11 @@
 # SB3_Gym
 Stable Baselines 3 Application on OpenAI Gym Environments
 
+## Environments
+- LunarLander
+- BipedalWalker-V3
+- BipedalWalkerV3Hardcore
+
 ## Installation
 ```
 conda create --name StableBaselines3 python=3.8.10
